@@ -19,10 +19,10 @@
     "docs"
   ],
   "scripts": {
-    "start": "parcel src/index.html -d temp",
+    "start": "parcel demo/index.html -d temp",
     "test": "ava",
     "clean": "rm -rf dist/* temp/*",
-    "build": "yarn run clean && yarn test && parcel build src/index.html -d dist",
+    "build": "yarn run clean && yarn test && parcel build demo/index.html -d dist",
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {

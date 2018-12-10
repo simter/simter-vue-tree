@@ -1,0 +1,29 @@
+/** Need to add 'dark' or 'light' class to body */
+
+/** dark theme */
+
+.dark .st-tree .st-wrapper.st-hover {
+  background-color: #333
+}
+
+.dark .st-tree .st-wrapper.st-active {
+  background-color: #444
+}
+
+.dark .st-tree .st-wrapper.st-active.st-hover {
+  background-color: #666
+}
+
+/** light theme */
+
+.light .st-tree .st-wrapper.st-hover {
+  background-color: #eee
+}
+
+.light .st-tree .st-wrapper.st-active {
+  background-color: #ccc
+}
+
+.light .st-tree .st-wrapper.st-active.st-hover {
+  background-color: #bbb
+}
