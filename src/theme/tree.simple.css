@@ -1,4 +1,10 @@
-/** A simple demo theme for simter-vue-tree */
+/**
+ * A simple theme for simter-vue-tree.
+ *
+ * See https://simter.github.io/simter-vue-tree/demo/tree.simple.html
+ *
+ * <st-tree :nodes="nodes"></st-tree>
+ */
 
 /** light theme */
 
