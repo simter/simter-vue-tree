@@ -14,7 +14,7 @@
         @click.stop="clickNode(node)"
       >
         <span
-          :style="{marginLeft: (level * indent) + 'em'}"
+          :style="{marginLeft: (level * indent) + 'em', visibility: node.isFolder ? 'visible' : 'hidden'}"
           class="st-toggle"
           :class="getToggleClass(node)"
           @click.stop="toggleCollapsed(node)"
