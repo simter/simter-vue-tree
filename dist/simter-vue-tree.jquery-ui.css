@@ -1,0 +1,25 @@
+/**
+ * A jquery-ui theme adapter for simter-vue-tree.
+ *
+ * See https://simter.github.io/simter-vue-tree/demo/tree.jquery-ui.html
+ *
+ * <st-tree :nodes="nodes" class="ui-widget-content" :classes="{
+ *   hover: "ui-state-hover",
+ *   active: "ui-state-active",
+ *   toggle: "ui-icon",
+ *   collapsed: "ui-icon-triangle-1-e",
+ *   expanded: "ui-icon-triangle-1-se"
+ * }"></st-tree>
+ */
+
+.st-tree.ui-widget-content {
+  background-image: none;
+}
+
+.st-tree .st-wrapper.st-active {
+  border: none;
+}
+
+.st-tree .st-wrapper.st-hover {
+  border: none;
+}

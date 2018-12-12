@@ -1,0 +1,35 @@
+/**
+ * A simple theme for simter-vue-tree.
+ *
+ * See https://simter.github.io/simter-vue-tree/demo/tree.simple.html
+ *
+ * <st-tree :nodes="nodes"></st-tree>
+ */
+
+/** light theme */
+
+.st-tree .st-wrapper.st-hover {
+  background-color: #eee
+}
+
+.st-tree .st-wrapper.st-active {
+  background-color: #ccc
+}
+
+.st-tree .st-wrapper.st-active.st-hover {
+  background-color: #bbb
+}
+
+/** dark theme */
+
+.dark .st-tree .st-wrapper.st-hover {
+  background-color: #333
+}
+
+.dark .st-tree .st-wrapper.st-active {
+  background-color: #444
+}
+
+.dark .st-tree .st-wrapper.st-active.st-hover {
+  background-color: #666
+}
