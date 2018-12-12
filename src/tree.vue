@@ -56,7 +56,7 @@ export default {
       }
     },
     /** The nested nodes ident unit */
-    indent: { type: Number, required: false, default: 2 },
+    indent: { type: Number, required: false, default: 1 },
     level: { type: Number, required: false, default: 0 },
     collapsedProp: { type: String, required: false, default: "collapsed" },
     activeProp: { type: String, required: false, default: "active" }
