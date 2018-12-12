@@ -153,8 +153,17 @@ export default {
 .st-tree .st-wrapper {
   line-height: 1.5em;
   padding: 0.125em 0.25em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.st-tree .st-toggle {
+  width: 16px;
 }
 .st-tree .st-label {
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
