@@ -6,7 +6,8 @@
     "simter",
     "vue",
     "tree",
-    "parcel"
+    "parcel",
+    "rollup"
   ],
   "main": "dist/simter-vue-tree.js",
   "module": "dist/simter-vue-tree.esm.js",
@@ -15,17 +16,19 @@
   "license": "MIT",
   "files": [
     "src",
-    "dist",
-    "docs"
+    "dist"
   ],
   "scripts": {
     "start": "parcel demo/index.html -d temp",
     "test": "ava",
-    "clean": "rm -rf dist/* temp/*",
-    "build": "yarn run clean && yarn test && rollup -c && yarn run min-js && yarn run copy-css",
-    "build-demo": "yarn run clean && parcel build demo/index.html -d dist",
+    "clean": "rm -rf dist/* docs/demo/* temp/*",
+    "build": "yarn run clean && yarn run build-component && yarn run build-demo",
+    "build-component": "yarn test && rollup -c && yarn run min-js && yarn run copy-css",
+    "build-demo": "parcel build demo/index.html -d docs/demo --public-url //simter.github.io/simter-vue-tree/demo/",
     "min-js": "uglifyjs --comments /^!/ dist/simter-vue-tree.js -o dist/simter-vue-tree.min.js --source-map=url",
-    "copy-css": "cp src/theme/tree.simple.css dist/simter-vue-tree.simple.css",
+    "copy-css": "yarn run copy-css-simple && yarn run copy-css-jquery-ui",
+    "copy-css-simple": "cp src/theme/tree.simple.css dist/simter-vue-tree.simple.css",
+    "copy-css-jquery-ui": "cp src/theme/tree.jquery-ui.css dist/simter-vue-tree.jquery-ui.css",
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
