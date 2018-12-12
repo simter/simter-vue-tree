@@ -22,7 +22,10 @@
     "start": "parcel demo/index.html -d temp",
     "test": "ava",
     "clean": "rm -rf dist/* temp/*",
-    "build": "yarn run clean && yarn test && parcel build demo/index.html -d dist",
+    "build": "yarn run clean && yarn test && rollup -c && yarn run min-js && yarn run copy-css",
+    "build-demo": "yarn run clean && parcel build demo/index.html -d dist",
+    "min-js": "uglifyjs --comments /^!/ dist/simter-vue-tree.js -o dist/simter-vue-tree.min.js --source-map=url",
+    "copy-css": "cp src/theme/simple.css dist/simter-vue-tree.simple.css",
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
@@ -35,7 +38,11 @@
     "require-extension-hooks": "~0.3.2",
     "require-extension-hooks-babel": "~0.1.1",
     "require-extension-hooks-vue": "~1.1.0",
+    "rollup": "~0.66.5",
+    "rollup-plugin-node-resolve": "~3.4.0",
+    "rollup-plugin-vue": "~4.3.2",
     "stylus": "~0.54.5",
+    "uglify-es": "~3.3.9",
     "vue": "~2.5.17",
     "vue-hot-reload-api": "^2.3.1",
     "vue-template-compiler": "~2.5.17"
