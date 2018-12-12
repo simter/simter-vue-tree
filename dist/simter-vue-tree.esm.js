@@ -1,5 +1,5 @@
 /*!
-* simter-vue-tree v0.1.0
+* simter-vue-tree v0.1.1
 * https://github.com/simter/simter-vue-tree.git 
 * @author RJ.Hwang <rongjihuang@gmail.com>
 * @license MIT
