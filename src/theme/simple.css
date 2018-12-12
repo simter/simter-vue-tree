@@ -1,4 +1,18 @@
-/** Need to add 'dark' or 'light' class to body */
+/** A simple demo theme for simter-vue-tree */
+
+/** light theme */
+
+.st-tree .st-wrapper.st-hover {
+  background-color: #eee
+}
+
+.st-tree .st-wrapper.st-active {
+  background-color: #ccc
+}
+
+.st-tree .st-wrapper.st-active.st-hover {
+  background-color: #bbb
+}
 
 /** dark theme */
 
@@ -12,18 +26,4 @@
 
 .dark .st-tree .st-wrapper.st-active.st-hover {
   background-color: #666
-}
-
-/** light theme */
-
-.light .st-tree .st-wrapper.st-hover {
-  background-color: #eee
-}
-
-.light .st-tree .st-wrapper.st-active {
-  background-color: #ccc
-}
-
-.light .st-tree .st-wrapper.st-active.st-hover {
-  background-color: #bbb
 }
