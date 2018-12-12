@@ -2,14 +2,14 @@
 
 A vue tree component. [Demo](https://simter.github.io/simter-vue-tree/demo).
 
-## Requirement
+## 1. Requirement
 
 | Name   | Version |
 |--------|---------|
 | Vue    | 2.5+    |
 | Parcel | 1.10+   |
 
-## Develop
+## 2. Develop
 
 ```
 yarn install
@@ -18,7 +18,7 @@ yarn start
 
 > Then visit <http://localhost:1234>.
 
-## Build
+## 3. Build
 
 ```
 yarn run build
@@ -27,7 +27,9 @@ yarn run build
 > Use [rollup] build component to `dist` directory.
 > Use [parcel] build demo to `docs/demo` directory.
 
-## Props
+## 4. Options
+
+### 4.1. Props
 
 | Name        | Require | ValueType | Description
 |-------------|---------|-----------|-------------
@@ -49,13 +51,46 @@ yarn run build
 | ├ collapsed | false   | String    | The folder's collapsed class
 | ├ expanded  | false   | String    | The folder's expanded class
 
-## Events
+### 4.2. Events
 
 | Name        | Params  | Description
 |-------------|---------|-------------
 | click-node  | node    | emit when use click the node
 
-## Html Structure
+## 5. Usage
+
+Js:
+
+```js
+import stTree from 'simter-vue-tree'
+
+function buildMonths(node) {
+  const months = []
+  for(let m = 1; m <= 12; m++) months.push(`${node.year}Y${m}M`)
+  return Promise.resolve(months) // or 'return months'
+}
+
+new Vue({
+  el: "#sample",
+  data: {
+    nodes: [
+      { label: "2018Y", year: 2018, nodes: ["12M", "11M", ..., "1M"] },
+      { label: "2017Y", year: 2017, nodes: buildMonths },
+      { label: "2016Y", year: 2016, nodes: buildMonths },
+      ...
+    ]
+  },
+  components: { stTree }
+})
+```
+
+Html:
+
+```html
+<st-tree id="#sample" :nodes="nodes"></st-tree>
+```
+
+## 6. Html Structure
 
 ```
 <ul class="st-tree">
