@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import index from './jquery-ui.vue'
+import index from './tree.jquery-ui.vue'
 
 new Vue({
   el: "#app",
