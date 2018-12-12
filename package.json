@@ -25,7 +25,7 @@
     "build": "yarn run clean && yarn test && rollup -c && yarn run min-js && yarn run copy-css",
     "build-demo": "yarn run clean && parcel build demo/index.html -d dist",
     "min-js": "uglifyjs --comments /^!/ dist/simter-vue-tree.js -o dist/simter-vue-tree.min.js --source-map=url",
-    "copy-css": "cp src/theme/simple.css dist/simter-vue-tree.simple.css",
+    "copy-css": "cp src/theme/tree.simple.css dist/simter-vue-tree.simple.css",
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {

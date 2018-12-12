@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import index from './simple.vue'
+import index from './tree.simple.vue'
 
 new Vue({
   el: "#app",
