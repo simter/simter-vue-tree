@@ -105,7 +105,6 @@ export default {
         showBorder: true,
         width: "20em",
         height: "auto",
-
         theme: "dark-hive",
         themes: {
           base:
@@ -115,15 +114,11 @@ export default {
         }
       },
       classes: {
-        // wrapper: "ui-state-normal",
         hover: "ui-state-hover",
         active: "ui-state-active",
         toggle: "ui-icon",
         collapsed: "ui-icon-triangle-1-e",
-        expanded: "ui-icon-triangle-1-se",
-        // icon: "ui-icon",
-        node: "node-test",
-        label: "label-test"
+        expanded: "ui-icon-triangle-1-se"
       }
     };
   },
