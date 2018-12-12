@@ -1,6 +1,6 @@
 # simter-vue-tree
 
-A vue tree component.
+A vue tree component. [Demo](https://simter.github.io/simter-vue-tree/demo).
 
 ## Requirement
 
@@ -16,9 +16,7 @@ yarn install
 yarn start
 ```
 
-Then open <http://localhost:1234>.
-
-> Use [parcel] run to `temp` directory.
+> Then visit <http://localhost:1234>.
 
 ## Build
 
@@ -26,7 +24,8 @@ Then open <http://localhost:1234>.
 yarn run build
 ```
 
-> Use [parcel] build to `dist` directory. Open `dist/index.html` to see the demo.
+> Use [rollup] build component to `dist` directory.
+> Use [parcel] build demo to `docs/demo` directory.
 
 ## Props
 
@@ -34,7 +33,7 @@ yarn run build
 |-------------|---------|-----------|-------------
 | nodes       | true    | \[{}\]<br>\[String\]<br>Function | Define tree nodes.<br>- Array : The child nodes, `String` array item means setting the `label` property<br>- Function : return a array or Promise resolve with the child nodes, the first param is the parent node object
 | ├ label     | true    | String<br>Function | The node's visible text. It's the string value or the function return value. The function's first param is the node object
-| ├ icon      | true    | String    | The node's icon class
+| ├ icon      | false   | String    | The node's icon class
 | ├ ...custom | false   | Custom    | The custom properties for this node
 | ├ nodes     | false   | \[{}\]<br>Function | The nested nodes
 | parentNode  | false   | Node      | The parent node that this tree belong to
@@ -92,6 +91,7 @@ yarn run build
 ```
 
 
+[rollup]: https://rollupjs.org
 [parcel]: https://parceljs.org
 [yarn]: https://yarnpkg.com
 [Vue]: https://vuejs.org
