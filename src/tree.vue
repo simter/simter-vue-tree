@@ -20,7 +20,10 @@
           @click.stop="toggleCollapsed(node)"
         >{{node.isFolder ? (node.collapsed ? '>' : '∨') : ''}}</span>
         <span class="st-icon" :class="[classes.icon, node.icon]"></span>
-        <span class="st-label" :class="[classes.label, nowrap ? 'nowrap' : '']">{{getLabel(node.origin)}}</span>
+        <span class="st-label" 
+          :class="[classes.label, nowrap ? 'nowrap' : '']"
+          :title="nowrap ? getLabel(node.origin) : null"
+        >{{getLabel(node.origin)}}</span>
       </div>
       <!-- if has children -->
       <st-tree
