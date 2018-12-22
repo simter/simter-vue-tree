@@ -25,6 +25,7 @@ export const nodes = [
   },
   {
     "label": "4 Leaf pdf",
-    "icon": "pdf"
+    "icon": "pdf",
+    "picked": true
   }
 ];

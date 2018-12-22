@@ -115,7 +115,7 @@ export default {
       },
       classes: {
         hover: "ui-state-hover",
-        active: "ui-state-active",
+        picked: "ui-state-active",
         toggle: "ui-icon",
         collapsed: "ui-icon-triangle-1-e",
         expanded: "ui-icon-triangle-1-se"

@@ -12,11 +12,11 @@
   background-color: #eee
 }
 
-.st-tree .st-wrapper.st-active {
+.st-tree .st-wrapper.st-picked {
   background-color: #ccc
 }
 
-.st-tree .st-wrapper.st-active.st-hover {
+.st-tree .st-wrapper.st-picked.st-hover {
   background-color: #bbb
 }
 
@@ -26,10 +26,10 @@
   background-color: #333
 }
 
-.dark .st-tree .st-wrapper.st-active {
+.dark .st-tree .st-wrapper.st-picked {
   background-color: #444
 }
 
-.dark .st-tree .st-wrapper.st-active.st-hover {
+.dark .st-tree .st-wrapper.st-picked.st-hover {
   background-color: #666
 }

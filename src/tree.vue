@@ -59,10 +59,10 @@ export default {
     indent: { type: Number, required: false, default: 1 },
     level: { type: Number, required: false, default: 0 },
     collapsedProp: { type: String, required: false, default: "collapsed" },
-    activeProp: { type: String, required: false, default: "active" }
+    pickedProp: { type: String, required: false, default: "picked" }
   },
   data() {
-    return { localNodes: [], activeNode: null };
+    return { localNodes: [], pickedNode: null };
   },
   created() {
     this.initLocalNodes();
@@ -97,7 +97,7 @@ export default {
           origin: node,
           isFolder: node.hasOwnProperty("nodes"),
           collapsed: node[this.collapsedProp] !== false,
-          active: node[this.activeProp] === true
+          picked: node[this.pickedProp] === true
         };
       });
     },
@@ -118,9 +118,9 @@ export default {
         c.push("st-hover");
         if (this.classes.hover) c.push(this.classes.hover);
       }
-      if (node.active) {
-        c.push("st-active");
-        if (this.classes.active) c.push(this.classes.active);
+      if (node.picked) {
+        c.push("st-picked");
+        if (this.classes.picked) c.push(this.classes.picked);
       }
       return c;
     },
@@ -132,11 +132,11 @@ export default {
     },
     clickNode(node) {
       // inactivate previous node
-      if (this.rootTree.activeNode) this.rootTree.activeNode.active = false;
+      if (this.rootTree.pickedNode) this.rootTree.pickedNode.picked = false;
 
       // activate this node and cache it
-      node.active = true;
-      this.rootTree.activeNode = node;
+      node.picked = true;
+      this.rootTree.pickedNode = node;
 
       // emit event
       this.rootTree.$emit("click-node", node.origin);

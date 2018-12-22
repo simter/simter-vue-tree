@@ -12,7 +12,7 @@
     <h3>Example 1 : Auto height</h3>
     <div>nodes = [x, ...]</div>
     <st-tree :nodes="tree1Nodes" :classes="classes" @click-node="clickTree1Node($event)"></st-tree>
-    <div>{{tree1ActiveNode ? 'click-node: ' + tree1ActiveNode : ''}}</div>
+    <div>{{tree1PickedNode ? 'click-node: ' + tree1PickedNode : ''}}</div>
 
     <h3>Example 2 : Scroll height</h3>
     <div>nodes = function(){ return [x, ...] }</div>
@@ -21,7 +21,7 @@
       :nodes="tree2Nodes"
       @click-node="clickTree2Node($event)"
     ></st-tree>
-    <div>{{tree2ActiveNode ? 'click-node: ' + tree2ActiveNode : ''}}</div>
+    <div>{{tree2PickedNode ? 'click-node: ' + tree2PickedNode : ''}}</div>
   </div>
 </template>
 
@@ -46,8 +46,8 @@ export default {
   data() {
     return {
       theme: "dark",
-      tree1ActiveNode: null,
-      tree2ActiveNode: null,
+      tree1PickedNode: null,
+      tree2PickedNode: null,
       tree1Nodes: nodes,
       tree2Nodes: function() {
         return Promise.resolve(nodes);
@@ -62,17 +62,17 @@ export default {
         hover: "hover-test",
         collapsed: "collapsed-test",
         expanded: "expanded-test",
-        active: "active-test"
+        picked: "picked-test"
       }
     };
   },
   components: { stTree },
   methods: {
     clickTree1Node(node) {
-      this.tree1ActiveNode = node.label || node;
+      this.tree1PickedNode = node.label || node;
     },
     clickTree2Node(node) {
-      this.tree2ActiveNode = node.label || node;
+      this.tree2PickedNode = node.label || node;
     }
   },
   watch: {
