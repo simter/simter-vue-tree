@@ -28,6 +28,7 @@
         class="ui-widget-content"
         :classes="classes"
         :nodes="nodes"
+        :nowrap="ui.nowrap"
         @click-node="clickTreeNode($event)"
       ></st-tree>
     </div>
@@ -37,6 +38,9 @@
         <li>
           <label>
             <input type="checkbox" v-model="ui.showBorder"> Bordered Tree
+          </label>
+          <label>
+            <input type="checkbox" v-model="ui.nowrap"> Nowrap label
           </label>
         </li>
         <li>
@@ -103,6 +107,7 @@ export default {
       nodes: nodes,
       ui: {
         showBorder: true,
+        nowrap: false,
         width: "20em",
         height: "auto",
         theme: "dark-hive",

@@ -12,6 +12,10 @@
  * }"></st-tree>
  */
 
+.st-tree .st-toggle {
+  margin-top: .2em;
+}
+
 .st-tree.ui-widget-content {
   background-image: none;
 }

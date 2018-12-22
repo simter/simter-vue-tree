@@ -20,7 +20,7 @@
           @click.stop="toggleCollapsed(node)"
         >{{node.isFolder ? (node.collapsed ? '>' : '∨') : ''}}</span>
         <span class="st-icon" :class="[classes.icon, node.icon]"></span>
-        <span class="st-label" :class="classes.label">{{getLabel(node.origin)}}</span>
+        <span class="st-label" :class="[classes.label, nowrap ? 'nowrap' : '']">{{getLabel(node.origin)}}</span>
       </div>
       <!-- if has children -->
       <st-tree
@@ -59,7 +59,8 @@ export default {
     indent: { type: Number, required: false, default: 1 },
     level: { type: Number, required: false, default: 0 },
     collapsedProp: { type: String, required: false, default: "collapsed" },
-    pickedProp: { type: String, required: false, default: "picked" }
+    pickedProp: { type: String, required: false, default: "picked" },
+    nowrap: { type: Boolean, required: false, default: false }
   },
   data() {
     return { localNodes: [], pickedNode: null };
@@ -155,13 +156,19 @@ export default {
   padding: 0.125em 0.25em;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 .st-tree .st-toggle {
-  width: 16px;
+  flex: 0 0 auto;
+}
+.st-tree .st-icon {
+  flex: 0 0 auto;
 }
 .st-tree .st-label {
+  flex: 0 1 auto;
   cursor: pointer;
+}
+.st-tree .st-label.nowrap {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

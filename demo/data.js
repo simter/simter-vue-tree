@@ -1,7 +1,7 @@
 export const nodes = [
   "1 Leaf",
   {
-    "label": "2 Folder",
+    "label": "2 Folder - long-label long-label long-label long-label long-label",
     "nodes": [
       "2-1 Leaf",
       {
@@ -20,11 +20,11 @@ export const nodes = [
     ]
   },
   {
-    "label": "3 Folder - empty children",
+    "label": "3 Empty folder",
     "nodes": []
   },
   {
-    "label": "4 Leaf pdf",
+    "label": "4 Pre picked Leaf",
     "icon": "pdf",
     "picked": true
   }

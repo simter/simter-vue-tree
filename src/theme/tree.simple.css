@@ -6,6 +6,10 @@
  * <st-tree :nodes="nodes"></st-tree>
  */
 
+ .st-tree .st-toggle {
+  width: .8em;
+}
+
 /** light theme */
 
 .st-tree .st-wrapper.st-hover {
